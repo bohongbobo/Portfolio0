@@ -1,0 +1,86 @@
+body{
+  background: black;
+}
+
+ul.content{
+  position: relative;
+  z-index: 10;
+  list-style-type: none;
+  background-color: #333;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li.btn {
+  float: left;
+  border-right: 0.0625em solid white;
+}
+
+li.btn a{
+  display: block;
+  font-size: 1.5em;
+  padding: 1em 1em;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: #333;
+
+}
+li.btn:last-child{
+  border-right: none;
+}
+li.btn a:hover:not(.active){
+  background-color: #000000;
+  color: white;
+}
+li.btn a:link visited{
+  color: black;
+}
+li.btn a.active{
+  background-color:green;
+}
+
+
+
+
+.dody {font-family: Verdana,sans-serif;
+box-sizing:border-box}
+
+header{
+  background-image: url("/Users/bobo/desktop/web/images/yeah.JPG");
+  color: white;
+  height: 700px;
+  width: 1080px;
+  text-align: center;
+  margin: 0 auto;
+}
+.title{
+  display: inline-block;
+  font-size: 64px;
+  padding-top: 200px;
+  width: 960px;
+}
+/*
+.words{
+  font-style: oblique;
+  position: absolute;
+  color: white;
+  font-size: 3.7em;
+  left: 34%;
+  top: 10%;
+  text-align: center;
+}
+.words1{
+  font-style: italic;
+  position: absolute;
+  color: white;
+  font-size: 2.5em;
+  left: 40%;
+  top: 25%;
+}
+.imgs{
+  width: 100%;
+  height: 100%;
+}
+*/

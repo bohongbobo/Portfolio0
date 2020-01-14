@@ -1,0 +1,432 @@
+    *{
+      box-sizing: border-box;
+    }
+    .title-position{
+        position: sticky;
+        top: 0px; /* top, right, left, 什么的是必须的 */
+        background-color: white;
+        color: violet;
+        padding: 10px;
+        border:5px ridge pink;
+        text-align: center;
+    }
+
+
+    ul.website{
+        position: sticky;
+        top: 65px;
+        list-style-type: none;
+        background-color: #333;
+        margin: 0;
+        padding: 0;
+        overflow: visible;
+        border-radius: 10px;
+    }
+
+    li.sites {
+        float: left;
+        border-right: 1px solid white;
+    }
+
+    li.sites a{
+        display: block;
+        /* width: 100px;
+        border: 2px solid red; */
+        font-size: 20px;
+        padding: 20px 20px;
+        text-align: center;
+        color: white;
+        background-color: #333;
+        transition: background-color 0.5s;
+
+    }
+    li.sites a:hover:not(.active){
+        background-color: white;
+        color: black;
+    }
+    li.sites:last-child{
+        border-right: none;
+    }
+    li.sites a:link visited{
+        color: black;
+        text-decoration: underline;
+    }
+    li.sites a.active{
+        background-color:green;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+
+
+
+    .dropbutton{
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        cursor: pointer;
+        font-size: 20px;
+        border:none;
+        font-family: serif;
+    }
+    .dropdown{
+        display: inline-block;
+
+    }
+    .dropdown-content{
+        display: none;
+        position: absolute;
+        min-width: 150px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        background-color: #ffffff;
+    }
+    .dropdown-content a{
+        color: black;
+        display: block;
+        padding: 20px 51.5px;
+        font-size: 19px;
+
+    }
+    .dropdown-content a:hover{
+        background-color: #333;
+        color: white;
+    }
+    .dropdown:hover .dropdown-content{
+        display: block;
+    }
+    .dropdown:hover .dropbutton{
+        background-color: #000000;
+    }
+
+
+    .tip{
+      /*
+      transform: translate(0px, -50px); x和y轴上平移
+      transform: skew(20deg, 30deg);在x和y轴上倾斜角度
+      */
+      position: relative;
+      display: inline-block;
+      border: 5px grey;
+      border-style: outset;
+      background-color: white;
+      color: black;
+      padding: 5px;
+    }
+
+    .tip .tipcontext{
+      visibility: hidden;
+      border:5px;
+      background-color: #707070;
+      color: white;
+      display: inline-block;
+      width: 160px;
+      border-radius: 20px;
+      padding: 5px;
+      border-style: inset;
+      border-color: blue;
+
+      position: absolute;
+      z-index: 1;
+      bottom:140%;
+      margin-left: 50px; /* 使用一半宽度 (width/2 = 160/2 = 80) 来居中提示工具 */
+      left: 10%;
+
+      opacity: 0;
+      transition: opacity 1s;
+    }
+
+    .tip .tipcontext:after{
+        content: "";
+        position: absolute;
+        top: 110%;
+        left: 50%;
+        margin-left: -7px;
+        border-width: 7px;
+        border-style: solid;
+        border-color:blue transparent transparent transparent;
+    }
+
+    .tip:hover .tipcontext{
+      visibility: visible;
+        opacity: 1;
+    }
+
+
+
+
+    #test1{
+      height: 200px;
+      background: linear-gradient(blue, cyan);
+    }
+    #test2{
+      height: 200px;
+      background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    }
+    #test3{
+      height: 200px;
+      background: linear-gradient(to bottom right, blue, cyan);
+    }
+    #test4{
+      height: 200px;
+      background: linear-gradient(0deg, blue, cyan);
+    }
+    #test5{
+      height: 200px;
+      background: repeating-linear-gradient(white, cyan 10%, blue 20%);
+    }
+    #test6{
+      height: 200px;
+      background: repeating-radial-gradient(white, cyan 10%, blue 25%);
+    }
+    #borderimage{
+      border:50px solid transparent;
+      height: 200px;
+      width: 250px;
+      padding:10px 10px;
+      border-image:url(/Users/bobo/desktop/web/space.jpeg) 30 30 round;
+      transition: width 1s, height 2s;
+    }
+    #borderimage:hover{
+      height: 420px;
+      width: 943px;
+    }
+    #hehe{/* id 的事用# ， class的是用 . */
+      background: cyan;
+      width: 100px;
+      height: 65px;
+      font-size: 24px;
+      font-family: times;
+      text-decoration: underline; /* line-through; overline */
+      text-transform: capitalize; /* uppercase; lowercase */
+      /*text-indent: 50px; /* 首行缩进 */
+      letter-spacing: 5px; /* 字母间的距离 */
+      direction: ltr; /* 文字书写方向：ltr：left to right.
+                                    rtl: right to left; */
+      text-shadow: 5px 5px 5px white; /* 横向，纵向，颜色 */
+      text-align: center;
+      transition: all 2s;
+      /*
+      margin-right:50px;
+      margin-left:10%;
+      */
+    }
+    #hehe:hover{
+      background: lightgrey;
+      transform: translate(700px, 200px) scale(1.5) rotate(360deg);
+    }
+
+    /*
+    @font-face {
+      font-family: MyFont;
+      scr: url('Sansation_Light.ttf');
+    }
+    */
+    .lll{
+      /*font-family: MyFont;*/
+      font: italic bold 20px/30px Georgia,serif;
+      padding-left:20px; /* top, bottom, right, left 规则和border-style是一样的 */
+      margin:1cm;/* top, bottom, right, left 规则和border-style是一样的 */
+    }
+    p.lll span{
+        visibility: hidden; /* 只是隐藏，仍然占空间*/
+    }
+    p.lll em{
+        display: none; /* 完全不会显示，也不会站空间 */
+        /*  除了none，还有inline：把所有的信息写在一行，block：把一行的信息分成多行 */
+    }
+
+    .img{
+        vertical-align: text-top; /* text-bottom; 默认为text-bottom 图像与文字的对齐位置 */
+    }
+
+    img{
+        opacity: 0.5;
+        filter:alpha(opacity=40)
+    }
+    img:hover{
+        opacity: 1.0;
+        filter:alpha(opacity=100)
+    }
+
+
+    .some{
+        background: white;
+        background: url(/Users/bobo/desktop/11.jpg);
+        /*height: 500px; */
+        font-size: 20px;
+        padding: 20px;
+        text-align: justify;
+        line-height: 100%; /* 行距 */
+        word-spacing: 10px; /* 单词之间的距离 */
+        /* white-space: nowrap;  (并不知道什么用)*/
+    }
+    .some span{
+        color: red;
+        font-size: 24px;
+        background-color: blue;
+    }
+    .some span em{
+        color: white;
+        background: violet;
+        font-size: 30px;
+    }
+    #haha{
+        font-family:Lucida Grande;
+        font-size: 20px;
+        background: navy;
+        color: white;
+        text-align: center;
+        padding: 30px;
+    }
+    p{
+        color: green;
+        font-weight: bold; /* 字体加粗：normal; lighter; 900 */
+        font-variant: small-caps; /* 字体的转变 */
+    }
+
+
+
+    a.first:link{color:#0000ff;}
+    a.first:visited{font-size: 200%;}
+    a.first:hover{font-size: 150%; color:#ff0000; font-family:Georgia,serif; text-decoration:underline; background:#ffffff;}
+    a.first:active{text-decoration: overline;}
+    a{text-decoration:none;}
+
+    a.second:link{color: red;}
+    a.second:visited{font-size: 100%;}
+    a.second:hover{color: black; background: #cccccc; font-size: 200%;}
+    a.second:active{text-decoration: underline;}
+
+    table, th, td{
+        border: 5px solid grey;
+        border-collapse:collapse;
+    }
+    table{
+        width: 100%;
+    }
+    th{
+        height: 80px;
+        vertical-align: bottom;
+        text-align: left;
+    }
+
+    td{
+        padding: 20px;
+        text-align: left;
+        height: 60px;
+
+    }
+    td ul{
+        list-style-type: square;
+    }
+
+    caption{
+        caption-side: bottom;
+        background: blue;
+        color:white;
+    }
+
+
+    p.none {border-style: none;}
+    p.dotted{border-style: dotted;
+             border-color: red;}
+    p.dashed{border-style: dashed;
+             border-width: 10px;}
+    p.solid {border-style:solid;
+             border-width: 10px;}
+    p.double {border-style:double;}
+    p.groove {border-style:groove;}
+    p.ridge {border-style:ridge;}
+    p.inset {border-style:inset;
+             border-width: 10px;}
+    p.outset {border-style:outset;}
+    p.hidden {border-style:hidden;}
+    /* border-... 之前都必须要使用 border-style */
+    p.combine {border-bottom-style: dotted;
+                border-top-style: solid;
+                border-right-style: dashed;
+                border-left-style: double;
+            }
+            /* 或者可以简写
+            p.combine{border-style: dotted solid double dashed;}
+            */
+            /*
+            border-style属性可以有1-4个值：
+
+            border-style:dotted solid double dashed;
+            上边框是 dotted
+            右边框是 solid
+            底边框是 double
+            左边框是 dashed
+
+            border-style:dotted solid double;
+            上边框是 dotted
+            左、右边框是 solid
+            底边框是 double
+
+            border-style:dotted solid;
+            上、底边框是 dotted
+            右、左边框是 solid
+
+            border-style:dotted;
+            四面边框是 dotted
+            */
+
+    p.dotted2{border: solid thick;
+            outline: dotted;
+            outline-color: red;
+            outline-width: 5px;}
+
+
+
+    .z-, #zz-{
+        position: fixed; /* static, relative, fixed, absolute, sticky 不同的position不同的作用*/
+        z-index: -1; /* 如果是-1图或者另外啥东西重叠在另一个文字或者其他啥的下面 */
+        top: 100px;
+    }
+
+    .scroll{
+        max-height: 100px;
+        overflow:scroll;
+    }
+
+    .cursor{
+        max-height: 240px;
+        float: left;
+        padding: 10px;
+        width: 100px;
+        overflow: auto;
+        }
+    .frame{
+        max-height: 300px;
+        overflow: scroll;
+    }
+    q:lang(ha){
+        quotes: "<quotes>" "<quotes>";
+    }
+
+
+
+    div.background{
+        width: 530px;
+        height: 500px;
+        background: url(/Users/bobo/desktop/web/haha.jpeg) repeat;
+        margin-top: 20px;
+        float: left;
+        margin-right: 20px;
+    }
+    div.paragraph{
+        float: left;
+        width: 400px;
+        height: 350px;
+        background-color: #fff;
+        margin: 70px 50px;
+        border: 1px solid #fff;
+        opacity: 0.4;
+    }
+    div.paragraph p{
+        margin: 50px 50px;
+        font-weight: bold;
+        font-size: 25px;
+        color: grey;
+    }
